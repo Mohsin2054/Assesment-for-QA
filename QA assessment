@@ -1,0 +1,81 @@
+Assessment for QA:
+
+
+1. What is RTM and its use in testing life cycle?
+RTM is Requirement Traceability Matrix. It maps user requirements with one or more test cases. 
+It contains the requirements with its all possible test scenarios and their current state (passed or failed),
+this would help to understand the level of testing activities done. 
+Uses:
+It is used to ensure that all the business requirements are covered in the testing & nothing is missed out. 
+It is also used to stay updated with the test execution coverage end to end, 
+RTM consists of requirements, test case id's, defect id's etc. Using this document, the person can track the user stories. 
+Use of RTM helps in proper planning and tracking.
+
+When should we run a regression test on an application?
+We should be running regression when new functionality is added, when any rollback is done etc. 
+Regression testing is done to make sure that the new changes made to an application does not affect the existing functionality.
+
+What is Database Testing and when should we consider testing database?
+Database testing is to test integration between our software and the database. Testing tables, schema, triggers etc.
+When there is huge data involved one must consider testing database like in Finance, Banking & healthcare.
+We need to test data in the tables to ensure right data is displayed in the application.
+
+What do you mean by Absolute and Relative xPaths? Which one should we consider to create our automation test scripts?
+Absolute xpath traces the web element from the root of the html page. Uses single slash and identifies element in a faster way.
+Ex: html/head/body/table/tbody/tr/th.
+Relative xpath traces the web element from a node given on a html page. Uses double slash and slower in identifying elements compared to absolute xpath.
+Ex: //input[@id='name'].
+One should consider relative xpath in creating automation script because it is,
+1. Easy to write and takes less time.
+2. Many tools available like chropath, firebug etc.
+3. If any changes in the page is made it will easily identify the given node whereas absolute xpath fails.
+
+
+What do you mean by Iterative and Incremental development approach?
+Iterative: 
+Developing software in small parts. Here new features are added one by one in iterations.
+Incremental:
+In incremental development approach new functionalities are developed and tested in each sprint. 
+Boundaries are not specified before development starts.
+
+
+
+
+
+A.	Description - User should be able to Log into the app using Facebook
+Actor - User
+Trigger - User launches the app and tries to log in
+
+	We need to create a dummy user for testing.
+	Make sure you remove your application from test user’s Facebook account using app settings, before you test each use case
+	We need to perform these test cases for testing of the Facebook application login,
+
+	Click on login with Facebook and enter test credentials, it should allow you to login if credentials are valid.
+	Check if username or password is incorrect it shows options for ‘forgot password’ or ‘recovery’.  (negative)
+	When user login to the app using Facebook, check whether that app is listed in test users Facebook profile.
+	When user logs out of the app and try visiting it again it should allow user to enter the same with login via Facebook option.
+	When user uninstalls the app and installs again it should allow the user to login with Facebook.
+	When user changes password of the Facebook, app should ask for new password or else log out. And when new credentials are fed it should login.
+	If user has already logged in to Facebook App on the same device, test app shouldn’t ask for the credentials, rather it should ask only accept or reject pop-up. If accepted, it should directly login to the app.
+	Check if app allows to login if we reject the login pop-up. (negative)
+
+B.	Description - User should be able to do a successful transaction using a Payment
+Gateway (Example -PayPal)
+Actor – User
+Trigger - User is on store screen and selects a product to pay
+
+	Create a dummy card for testing purpose.
+	These are the test cases we should execute in order to check the payment gateway.
+
+
+	Test whether payment option PayPal is available. And redirects to PayPal transaction page on selecting.
+	Test whether correct details of the credit/debit card are reflecting in the database as expected.
+	Test whether the amount debited from the card is same as the amount which is reflecting in PayPal.
+	Test whether currency type matches in both credit transaction and debit transaction end.
+	Test if any network issues are faced the payment gateway is back to its normal form. Amount deducted should be transferred back.
+	Test whether OTP is sent to the authorized users on or within the mentioned time SLA.
+	Test whether OTP is sent after the SLA time. (negative)
+	Test whether a Success message is shown on the screen after successful transaction.
+	Test whether it takes back to original app after the payment is done.
+	Test if success message is shown for a failed transaction. (negative)
+	Test if failure message is shown for a successful transaction. (negative)
