@@ -43,8 +43,8 @@ Boundaries are not specified before development starts.
 
 
 A.	Description - User should be able to Log into the app using Facebook
-Actor - User
-Trigger - User launches the app and tries to log in
+    Actor - User
+    Trigger - User launches the app and tries to log in
 
 	We need to create a dummy user for testing.
 	Make sure you remove your application from test user’s Facebook account using app settings, before you test each use case
@@ -60,9 +60,9 @@ Trigger - User launches the app and tries to log in
 	Check if app allows to login if we reject the login pop-up. (negative)
 
 B.	Description - User should be able to do a successful transaction using a Payment
-Gateway (Example -PayPal)
-Actor – User
-Trigger - User is on store screen and selects a product to pay
+    Gateway (Example -PayPal)
+    Actor – User
+    Trigger - User is on store screen and selects a product to pay
 
 	Create a dummy card for testing purpose.
 	These are the test cases we should execute in order to check the payment gateway.
