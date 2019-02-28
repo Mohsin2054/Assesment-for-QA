@@ -42,7 +42,7 @@ Boundaries are not specified before development starts.
 
 
 
-A.	Description - User should be able to Log into the app using Facebook
+A.  Description - User should be able to Log into the app using Facebook
     Actor - User
     Trigger - User launches the app and tries to log in
 
