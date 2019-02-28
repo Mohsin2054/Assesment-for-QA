@@ -59,7 +59,7 @@ A.  Description - User should be able to Log into the app using Facebook
 	If user has already logged in to Facebook App on the same device, test app shouldn’t ask for the credentials, rather it should ask only accept or reject pop-up. If accepted, it should directly login to the app.
 	Check if app allows to login if we reject the login pop-up. (negative)
 
-B.	Description - User should be able to do a successful transaction using a Payment
+B.  Description - User should be able to do a successful transaction using a Payment
     Gateway (Example -PayPal)
     Actor – User
     Trigger - User is on store screen and selects a product to pay
